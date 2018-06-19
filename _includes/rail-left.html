@@ -6,7 +6,7 @@
         <ul>
             {% for topic in site.topics %}
             <li class="{% if topic.url == page.url %}active{% endif %}">
-                <a href="{{ topic.url }}">
+                <a href="{{ topic.url | relative_url }}">
                     {{ topic.name }}
                 </a>
             </li>
@@ -18,7 +18,7 @@
         <ul>
             {% for guide in site.guides %}
             <li class="{% if guide.url == page.url %}active{% endif %}">
-                <a href="{{ guide.url }}">
+                <a href="{{ guide.url | relative_url }}">
                     {{ guide.name }}
                 </a>
             </li>
@@ -30,7 +30,7 @@
         <ul>
             {% for reference in site.references %}
             <li class="{% if reference.url == page.url %}active{% endif %}">
-                <a href="{{ reference.url }}">
+                <a href="{{ reference.url | relative_url }}">
                     {{ reference.name }}
                 </a>
             </li>
