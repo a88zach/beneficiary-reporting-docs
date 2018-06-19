@@ -1,0 +1,11 @@
+// External Links
+
+a[href^='http']:not(.button):not([download]):not(.social-link) {
+	&::after {
+		content: '\f08e';
+		display: inline-block;
+		font-family: 'FontAwesome';
+		font-size: 0.7em;
+		margin-left: 0.25em;
+	}
+}
