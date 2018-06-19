@@ -4,39 +4,61 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name='viewport' content='initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no' />
-  <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/images/favicon/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name='viewport' content='initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no' />
+    <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/images/favicon/favicon.ico">
 
-  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" />
 
-  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/main.css" />
 
-  <title>{% if page.meta-title %}{{page.meta-title}}{% else %}{{page.title}}{% endif %} | {{ site.title }}</title>
+    <title>{% if page.meta-title %}{{page.meta-title}}{% else %}{{page.title}}{% endif %} | {{ site.title }}</title>
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
-  <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
-  <!--[if IE]>
+    <!--[if IE]>
       <style>
       .hidden-ie {display: none;}
       </style>
       <![endif]-->
 
-    </head>
-    <body>
-      <div class="container">
-        {% include header.html %}
+</head>
 
-        {{ content }}
+<body>
+    <main id="panel">
+
+        {% include header.html %} 
+        
+        {% include title.html %}
+
+        <div class="content-container">
+            <div class="rail-left">
+                <div class="rail-left-content">
+
+                    {% include rail-left.html %}
+
+                </div>
+            </div>
+
+            <div class="rail-right">
+                <div class="rail-right-content">
+
+                    {{ content }}
+
+                </div>
+            </div>
+        </div>
 
         {% include footer.html %}
-      </div>
+    </main>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    </body>
-    </html>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

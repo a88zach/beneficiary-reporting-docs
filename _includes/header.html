@@ -1,10 +1,19 @@
-<div class="header clearfix">
-	<nav>
-		<ul class="nav nav-pills float-right">
-			{% for nav-link in site.data.nav %}
-				<li class="nav-item"><a href="{{site.baseurl}}{{ nav-link.location }}" class="{% if nav-link.title == page.title %}active{% endif %}">{{ nav-link.link }} {% if nav-link.title == page.title %}<span class="sr-only">(current)</span>{% endif %}</a></li>
-			{% endfor %}
-		</ul>
-	</nav>
-	<a href="./"><img src="./images/qpp_logo_rgb_color.png" /></a>
+<div id="qpp-nav-header">
+	<div>
+		<header id="top">
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="navbar-header">
+					<div class="header-mobile-brand">
+						<a class="header-brand" href="{{ "/" | relative_url }}">
+							<img class="qpp-logo" src="{{ "/images/qpp_logo_rgb_color.png" | relative_url }}" alt="qpp logo">
+						</a>
+					</div>
+				</div>
+				<div class="navbar-collapse collapse" id="nav-mobile" aria-expanded="true">
+					<ul class="nav navbar-nav navbar-right">
+					</ul>
+				</div>
+			</nav>
+		</header>
+	</div>
 </div>

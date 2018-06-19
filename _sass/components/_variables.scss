@@ -144,3 +144,11 @@ $content-headings: (
 $screen-sm: 768px;
 $screen-md: 992px;
 $screen-lg: 1200px;
+
+// page title header
+$page-header-bars: "%3Csvg xmlns='http://www.w3.org/2000/svg' width='272' height='430' viewBox='0 0 272 430'%3E%3Cg transform='translate(1 1)' opacity='.65' stroke-linecap='square' stroke='%23FFFFFF' stroke-width='2' fill='none' fill-rule='evenodd'%3E%3Cpath d='M70.154 23.898v480.67M159.89 47.51v457.074' opacity='.1'/%3E%3Cpath d='M269.793 0v504.584' opacity='.3'/%3E%3Cpath d='M89.983 151.932v352.645M46.627 151.932v352.645' opacity='.2'/%3E%3Cpath d='M138.38 151.932v352.645' opacity='.4'/%3E%3Cpath d='M187.786 133.854v370.19' opacity='.2'/%3E%3Cpath d='M239.209 133.854v370.19' opacity='.1'/%3E%3Cpath d='M113.174 261.467V503.9' opacity='.3'/%3E%3Cpath d='M21.42 261.467V503.9M.247 369.47v134.537' opacity='.1'/%3E%3Cpath d='M214.002 270.793v233.83' opacity='.2'/%3E%3C/g%3E%3C/svg%3E";
+$page-header-bars-multiply: "%3Csvg xmlns='http://www.w3.org/2000/svg' width='270' height='279' viewBox='0 0 270 279'%3E%3Cg transform='translate(1 1)' stroke='%23FFFFFF' stroke-width='2' fill='none' fill-rule='evenodd' opacity='.65' stroke-linecap='square'%3E%3Cpath d='M70 13.078v263.044M159 26v250.13' opacity='.1'/%3E%3Cpath d='M268 0v276.131' opacity='.3'/%3E%3Cpath d='M89.667 83.144v192.983m-43-192.983v192.983' opacity='.2'/%3E%3Cpath d='M137.667 83.144v192.983' opacity='.4'/%3E%3Cpath d='M186.667 73.25v202.585' opacity='.2'/%3E%3Cpath d='M237.667 73.25v202.585' opacity='.1'/%3E%3Cpath d='M112.667 143.086v132.67' opacity='.3'/%3E%3Cpath d='M21.667 143.086v132.67m-21-73.566v73.625' opacity='.1'/%3E%3Cpath d='M212.667 148.19v127.962' opacity='.2'/%3E%3C/g%3E%3C/svg%3E";
+$blue-muted: rgb(203, 228, 255);
+$gray-light: rgb(221, 221, 221);
+$gray-medium: rgb(118, 118, 118);
+$font-weight-medium: 500;
