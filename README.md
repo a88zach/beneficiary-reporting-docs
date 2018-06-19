@@ -27,5 +27,5 @@ Documentation for the beneficiary reporting api
 4. Build and run the site locally in watch mode
     ``` bash
     # from the docs directory
-    bundle exec jekyll serve --watch
+    bundle exec jekyll serve --watch --config _config.dev.yml
     ```

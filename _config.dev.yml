@@ -1,5 +1,5 @@
 title: Beneficiary Reporting API Documentation
-baseurl: "beneficiary-reporting-docs"
+baseurl: ""
 encoding: utf-8
 sass:
     sass_dir: _sass
