@@ -1,0 +1,321 @@
+/*
+Inline and back links
+ */
+
+.sidebar {
+
+	/* Active link */
+
+	.active {
+		background: $color-slate-dark;
+		border-left: solid 3px $color-teal-light;
+		color: $color-white;
+		fill: $color-white;
+		padding-left: 27px;
+
+		&.link-collapsed {
+			padding-left: 0;
+		}
+
+		&.light {
+			background: $color-slate;
+			border-left: solid 3px $color-teal-light;
+			color: $color-white;
+			fill: $color-white;
+		}
+
+		&[disabled] {
+			background: none;
+			border-left: 0;
+			color: $color-gray-dark;
+			fill: $color-gray-dark;
+			padding-left: 30px;
+
+			&.link-collapsed {
+				padding-left: 0;
+			}
+		}
+	}
+
+	.disabled {
+		color: $color-gray-medium !important;
+		fill: $color-gray-medium !important;
+		pointer-events: none;
+	}
+
+	.link-inline,
+	.link-back {
+		@include typography('Rubik', 16px, 22px, $color-teal-light);
+		@include hover($color-white);
+		align-items: center;
+		display: flex;
+		fill: $color-teal-light;
+
+		&.freeze {
+			color: $color-white;
+			fill: $color-white;
+		}
+	}
+
+	.link-back {
+		padding: 25px 25px 0;
+
+		.left-icon {
+			height: 12px;
+			margin-right: 15px;
+			width: 12px;
+		}
+
+		&:hover {
+			& > svg {
+				animation: left-bounce 0.6s;
+			}
+		}
+	}
+
+	.link-inline {
+		padding: 10px 16px;
+
+		.left-icon {
+			height: 25px;
+			margin-right: 15px;
+			width: 25px;
+		}
+
+		&.one-line {
+			padding: 10px 15px 10px 30px;
+		}
+	}
+
+	.link-collapse,
+	.link-expand {
+		align-items: center;
+		background: transparent;
+		border: none;
+		border-top: 1px solid $color-gray-medium;
+		display: flex;
+		fill: $color-gray-medium;
+		justify-content: center;
+		text-transform: uppercase;
+
+		.left-icon {
+			height: 40px;
+			width: 40px;
+		}
+	}
+
+	.link-collapse {
+		@include typography('Rubik', 14px, 0, $color-gray-medium);
+		padding: 20px 0;
+
+		.left-icon {
+			margin-right: 15px;
+		}
+
+		&.alt-style {
+			background: $color-slate-dark;
+		}
+	}
+
+	.link-expand {
+		@include typography('Rubik', 14px, 14px, $color-gray-medium);
+		flex-direction: column;
+		padding: 6px 0 20px;
+
+		.left-icon {
+			margin-right: 0;
+		}
+
+		&.alt-style {
+			background: $color-slate-dark;
+		}
+	}
+}
+
+.sidebar-content {
+
+	/* Collapsed links (when the sidebar is collapsed) */
+
+	.link-collapsed {
+		align-items: center;
+		display: flex;
+		fill: $color-teal-light;
+		justify-content: center;
+		padding: 15px 0;
+
+		.left-icon {
+			height: 25px;
+			width: 25px;
+		}
+
+		&.freeze {
+			color: $color-white;
+			fill: $color-white;
+		}
+
+		&[disabled] {
+			.left-icon {
+				fill: $color-gray-dark;
+			}
+		}
+	}
+
+	.link-drawer .drawer a {
+		@include typography('Rubik', 14px, 22px, $color-teal-light);
+	}
+
+	.link-slide-out .switcher-content li a {
+		@include typography('Rubik', 16px, 22px, $color-teal-light);
+	}
+
+	.link-drawer .drawer .active-link > a,
+	.link-drawer .drawer a:hover {
+		color: $color-white;
+	}
+
+	/* Drawer links */
+
+	.link-drawer {
+		display: flex;
+		flex-direction: column;
+
+		button {
+			background: transparent;
+			border: none;
+			border-radius: 0;
+
+			&.expanded {
+				background-color: $color-slate-dark;
+				border-left: solid 3px $color-teal-light;
+				color: $color-white;
+				fill: $color-white;
+			}
+		}
+
+		.link-body {
+			align-items: center;
+			display: flex;
+			flex-grow: 1;
+		}
+
+		.right-icon {
+			height: 12px;
+			transition: transform 0.6s;
+			width: 12px;
+		}
+
+		.rotated {
+			transform: rotate(180deg);
+		}
+
+		.drawer {
+			height: 0;
+			opacity: 0;
+			overflow: hidden;
+			padding: 0;
+			transition: opacity 0.25s;
+
+			li {
+				margin-left: 46px;
+				padding: 2px 0;
+			}
+
+			.active-link {
+				color: $color-teal-light;
+				list-style: disc;
+			}
+
+			.child-link {
+				margin-left: 20px;
+			}
+
+			&.open {
+				height: auto;
+				opacity: 1;
+				padding: 0 30px;
+				transition: opacity 0.25s;
+			}
+
+			&.currentPage {
+				background: $color-slate-dark;
+			}
+		}
+	}
+
+	/* Slide-out links */
+
+	.link-slide-out {
+		.switcher {
+			@include typography('Rubik', 14px, 16px, $color-gray-medium);
+			align-items: center;
+			display: flex;
+			fill: $color-gray-medium;
+			flex-direction: row;
+
+			svg {
+				height: 12px;
+				width: 12px;
+			}
+
+			.link-body {
+				flex-grow: 1;
+			}
+
+			.left-icon {
+				margin-right: 10px;
+			}
+
+			.right-icon {
+				transition: transform 0.6s;
+
+				&.rotated {
+					transform: rotate(180deg);
+				}
+			}
+		}
+
+		.switcher-content {
+			@include typography('Rubik', 16px, 22px, $color-teal-light);
+			background: $color-slate-dark;
+			height: 100%;
+			left: 0;
+			opacity: 0;
+			padding: 0 25px;
+			position: absolute;
+			top: 0;
+			transition: z-index 0.6s step-start, opacity 0.6s step-end, left 0.6s;
+			width: 300px;
+			z-index: -1;
+
+			li {
+				padding-bottom: 15px;
+			}
+
+			.practices-title {
+				@include typography('Rubik', 18px, 26px, $color-white);
+				font-weight: 500;
+				padding: 23px 0;
+			}
+
+			&.open {
+				left: 300px;
+				opacity: 1;
+				transition: z-index 0.6s step-end, left 0.6s;
+				z-index: 1;
+			}
+		}
+	}
+}
+
+.sidebar .link-inline[disabled] {
+	color: $color-gray-dark;
+
+	.left-icon,
+	.right-icon {
+		fill: $color-gray-dark;
+	}
+}
+
+.sidebar-content .link-slide-out .switcher:hover > .right-icon {
+	animation: right-bounce 0.6s;
+}
