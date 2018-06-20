@@ -1,0 +1,25 @@
+@mixin mediaQuery($media) {
+  @if $media == small-tablet-and-up {
+    @media only screen and (min-width: $screen-xs-min) {
+      @content;
+    }
+  }
+
+  @else if $media == tablet-and-up {
+    @media only screen and (min-width: $screen-sm-min), print {
+      @content;
+    }
+  }
+
+  @else if $media == desktop-and-up {
+    @media only screen and (min-width: $screen-md-min), print {
+      @content;
+    }
+  }
+
+  @else if $media == large-desktop-and-up {
+    @media only screen and (min-width: $screen-lg-min) {
+      @content;
+    }
+  }
+}

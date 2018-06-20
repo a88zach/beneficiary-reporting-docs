@@ -29,3 +29,6 @@ Documentation for the beneficiary reporting api
     # from the docs directory
     bundle exec jekyll serve --watch --config _config.dev.yml
     ```
+
+## Notes
+- The package.json file is only used to store the current verions of 3rd party libraries that were coppied into this project and to bring those packages down again if ever needed.  `npm install` cannot be used when auto-publishing to github pages.  This allows us to keep a simple workflow and allow editors to edit content directly in github.

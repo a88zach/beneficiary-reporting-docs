@@ -1,5 +1,5 @@
 ---
-name: Topic 2
+title: Topic 2
 ---
 
 Topic 2 content

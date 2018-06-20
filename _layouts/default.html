@@ -7,11 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name='viewport' content='initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no' />
-    <link rel="shortcut icon" type="image/x-icon" href="{{ "/images/favicon/favicon.ico" | relative_url }}">
-
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" />
-
-    <link rel="stylesheet" type="text/css" href="{{ "/css/main.css" | relative_url }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/images/favicon/favicon.ico' | relative_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ '/css/main.css' | relative_url }}" />
 
     <title>{% if page.meta-title %}{{page.meta-title}}{% else %}{{page.title}}{% endif %} | {{ site.title }}</title>
 
@@ -30,35 +27,36 @@
 </head>
 
 <body>
-    <main id="panel">
-
         {% include header.html %} 
-        
-        {% include title-bar.html %}
 
-        <div class="content-container">
-            <div class="rail-left">
-                <div class="rail-left-content">
+        <div class="wrapper">
+                    
+            {% include page-header.html %}
 
-                    {% include rail-left.html %}
+            <main class="main">
+                <div class="rail-left">
+                    <div class="rail-left-content">
 
+                        {% include menu.html %}
+
+                    </div>
+                </div>  
+                <div class="rail-right">
+                    <div class="rail-right-content">
+
+                        {{ content }}
+
+                    </div>
                 </div>
-            </div>
-
-            <div class="rail-right">
-                <div class="rail-right-content">
-
-                    {{ content }}
-
-                </div>
-            </div>
+            </main>
         </div>
-
+        
         {% include footer.html %}
-    </main>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="{{ '/scripts/jquery.min.js' | relative_url }}"></script>
+    <script src="{{ '/scripts/bootstrap.min.js' | relative_url }}"></script>
+    <script src="{{ '/scripts/site.js' | relative_url }}"></script>
+
 </body>
 
 </html>

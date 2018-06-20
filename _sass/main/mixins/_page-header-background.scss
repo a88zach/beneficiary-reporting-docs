@@ -1,0 +1,22 @@
+@mixin page-header-background($bars: false, $bgColor: rgb(0, 51, 102), $barsLength: "normal", $barsCount: "normal") {
+  background-color: $bgColor;
+  background-repeat: no-repeat, repeat-x;
+
+  @if $bars {
+    @if $barsLength == "short" {
+      background-position: bottom -100px right 20px, top left;
+    }
+
+    @else {
+      background-position: bottom right 20px, top left;
+    }
+
+    @if $barsCount == "more" {
+      background-image: url("data:image/svg+xml;charset=utf8,#{$page-header-bars-multiply}"), linear-gradient(55deg, rgb(0, 51, 102) 0%, rgb(46, 116, 187) 99%);
+    }
+
+    @else {
+      background-image: url("data:image/svg+xml;charset=utf8,#{$page-header-bars}"), linear-gradient(55deg, rgb(0, 51, 102) 0%, rgb(46, 116, 187) 99%);
+    }
+  }
+}

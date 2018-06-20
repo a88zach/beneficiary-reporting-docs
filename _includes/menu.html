@@ -1,0 +1,40 @@
+<div>
+    <div class="menu">
+        <div class="menu-header">
+            <h4>topics</h4>
+        </div>
+        <ul>
+            {% for topic in site.topics %}
+            <li class="{% if topic.url == page.url %}active{% endif %}">
+                <a href="{{ topic.url | relative_url }}">
+                    {{ topic.title }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        <div class="menu-header">
+            <h4>guides</h4>
+        </div>
+        <ul>
+            {% for guide in site.guides %}
+            <li class="{% if guide.url == page.url %}active{% endif %}">
+                <a href="{{ guide.url | relative_url }}">
+                    {{ guide.title }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        <div class="menu-header">
+            <h4>references</h4>
+        </div>
+        <ul>
+            {% for reference in site.references %}
+            <li class="{% if reference.url == page.url %}active{% endif %}">
+                <a href="{{ reference.url | relative_url }}">
+                    {{ reference.title }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

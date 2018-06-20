@@ -1,0 +1,60 @@
+$contentPadding: 40;
+
+/* SVG Icons */
+$page-header-bars: "%3Csvg xmlns='http://www.w3.org/2000/svg' width='272' height='430' viewBox='0 0 272 430'%3E%3Cg transform='translate(1 1)' opacity='.65' stroke-linecap='square' stroke='%23FFFFFF' stroke-width='2' fill='none' fill-rule='evenodd'%3E%3Cpath d='M70.154 23.898v480.67M159.89 47.51v457.074' opacity='.1'/%3E%3Cpath d='M269.793 0v504.584' opacity='.3'/%3E%3Cpath d='M89.983 151.932v352.645M46.627 151.932v352.645' opacity='.2'/%3E%3Cpath d='M138.38 151.932v352.645' opacity='.4'/%3E%3Cpath d='M187.786 133.854v370.19' opacity='.2'/%3E%3Cpath d='M239.209 133.854v370.19' opacity='.1'/%3E%3Cpath d='M113.174 261.467V503.9' opacity='.3'/%3E%3Cpath d='M21.42 261.467V503.9M.247 369.47v134.537' opacity='.1'/%3E%3Cpath d='M214.002 270.793v233.83' opacity='.2'/%3E%3C/g%3E%3C/svg%3E";
+$page-header-bars-multiply: "%3Csvg xmlns='http://www.w3.org/2000/svg' width='270' height='279' viewBox='0 0 270 279'%3E%3Cg transform='translate(1 1)' stroke='%23FFFFFF' stroke-width='2' fill='none' fill-rule='evenodd' opacity='.65' stroke-linecap='square'%3E%3Cpath d='M70 13.078v263.044M159 26v250.13' opacity='.1'/%3E%3Cpath d='M268 0v276.131' opacity='.3'/%3E%3Cpath d='M89.667 83.144v192.983m-43-192.983v192.983' opacity='.2'/%3E%3Cpath d='M137.667 83.144v192.983' opacity='.4'/%3E%3Cpath d='M186.667 73.25v202.585' opacity='.2'/%3E%3Cpath d='M237.667 73.25v202.585' opacity='.1'/%3E%3Cpath d='M112.667 143.086v132.67' opacity='.3'/%3E%3Cpath d='M21.667 143.086v132.67m-21-73.566v73.625' opacity='.1'/%3E%3Cpath d='M212.667 148.19v127.962' opacity='.2'/%3E%3C/g%3E%3C/svg%3E";
+
+/* Colors */
+$gray-lightest: rgb(250, 250, 250);
+$gray-lighter: rgb(246, 246, 246);
+$gray-light:	rgb(221, 221, 221);
+$gray-medium: rgb(118, 118, 118);
+$gray-dark: rgb(73, 73, 73);
+$gray-darker: rgb(51, 51, 51);
+$blue-lighter: rgb(46, 177, 237);
+$blue-light: rgb(0, 125, 198);
+$blue: rgb(0, 134, 212);
+$blue-dark: rgb(46, 116, 187);
+$blue-darker: rgb(15, 55, 100);
+$blue-bright: rgb(0, 155, 255);
+$blue-muted: rgb(203, 228, 255);
+$red: rgb(175, 13, 86);
+$orange: rgb(255, 196, 56);
+$green:	rgb(124, 179, 66);
+
+/* Font size based on html font size 16px */
+$remBase: 0.0625;
+$fs-10: (10 * $remBase) + rem;
+$fs-12: (12 * $remBase) + rem;
+$fs-13: (13 * $remBase) + rem;
+$fs-14: (14 * $remBase) + rem;
+$fs-15: (15 * $remBase) + rem;
+$fs-16: (16 * $remBase) + rem;
+$fs-18: (18 * $remBase) + rem;
+$fs-19: (19 * $remBase) + rem;
+$fs-20: (20 * $remBase) + rem;
+$fs-21: (21 * $remBase) + rem;
+$fs-22: (22 * $remBase) + rem;
+$fs-24: (24 * $remBase) + rem;
+$fs-25: (25 * $remBase) + rem;
+$fs-26: (26 * $remBase) + rem;
+$fs-28: (28 * $remBase) + rem;
+$fs-30: (30 * $remBase) + rem;
+$fs-32: (32 * $remBase) + rem;
+$fs-33: (33 * $remBase) + rem;
+$fs-36: (36 * $remBase) + rem;
+$fs-38: (38 * $remBase) + rem;
+$fs-44: (44 * $remBase) + rem;
+
+/* Font Weight */
+$font-weight-base: 400;
+$font-weight-light: 300;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+/* Media Query Breakpoints */
+$screen-xs-min: 480px;
+$screen-sm-min: 768px;
+$screen-md-min: 1024px;
+$screen-lg-min: 1200px;
+

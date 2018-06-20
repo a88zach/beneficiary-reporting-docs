@@ -1,0 +1,11 @@
+{
+  "name": "beneficiary-reporting-docs",
+  "version": "1.0.0",
+  "description": "Documentation for the beneficiary reporting api",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.3.1",
+    "qpp-style": "^3.0.9"
+  }
+}

@@ -1,0 +1,29 @@
+/* stylelint-disable max-nesting-depth */
+
+@mixin contentPadding($selectors, $paddingTop, $paddingBottom: $paddingTop, $mobilePaddingV: 0) {
+  @each $selector in $selectors {
+    .#{$selector} {
+      @if $paddingTop >= 40 and $mobilePaddingV == 0 {
+        padding: (($paddingTop / 2) + px) (($contentPadding / 2) + px) (($paddingBottom / 2) + px) (($contentPadding / 2) + px);
+      }
+
+      @else if $mobilePaddingV != 0 {
+        padding: ($mobilePaddingV + px) (($contentPadding / 2) + px) ($mobilePaddingV + px) (($contentPadding / 2) + px);
+      }
+
+      @else {
+        padding: ($paddingTop + px) (($contentPadding / 2) + px) ($paddingBottom + px) (($contentPadding / 2) + px);
+      }
+    }
+  }
+
+  @each $selector in $selectors {
+    @include mediaQuery(tablet-and-up) {
+      .#{$selector} {
+        padding: ($paddingTop + px) ($contentPadding + px) ($paddingBottom + px) ($contentPadding + px);
+      }
+    }
+  }
+}
+
+/* stylelint-enable max-nesting-depth */
